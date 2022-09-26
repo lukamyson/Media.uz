@@ -1,0 +1,378 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   font-family: 'Roboto';
+}
+
+a {
+   text-decoration: none;
+}
+
+.asd {
+   display: none;
+   transition: 0.3s;
+}
+
+.gif__div {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.3s;
+   background: #efefef;
+}
+
+.gif__load {
+   width: 16%;
+   transition: 0.3s;
+}
+
+.asd.active {
+   display: block;
+}
+
+.gif__div.active {
+   display: none;
+}
+
+.container {
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 12px;
+}
+
+.header__title {
+   color: aliceblue;
+   font-size: 25px;
+   letter-spacing: 2px;
+   padding-top: 13px;
+}
+
+.header__title:hover {
+   color: aliceblue;
+}
+
+.header__top {
+   background: rgb(91, 117, 231);
+   background: linear-gradient(90deg, rgba(91, 117, 231, 1) 0%, rgba(67, 67, 255, 1) 50%, rgba(91, 117, 231, 1) 100%);
+   width: 100%;
+   height: 100%;
+   z-index: 999;
+}
+
+.header__nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 5px;
+}
+
+.header__list {
+   display: flex;
+   align-items: center;
+   column-gap: 30px;
+   padding-top: 26px;
+}
+
+.header__link {
+   color: aliceblue;
+   font-size: 18px;
+   border: 2px solid transparent;
+   transition: 0.3s;
+   padding: 10px;
+}
+
+.header__link:hover {
+   border: 2px solid rgb(255, 255, 255);
+   padding: 10px;
+   color: black;
+}
+
+.header__first-link {
+   color: aliceblue;
+   font-size: 18px;
+}
+
+.header__first-link:hover {
+   color: aliceblue;
+   font-size: 18px;
+   text-shadow: 0px 0px 10px rgb(30, 0, 255);
+}
+
+.header__first-box {
+   padding-top: 10px;
+}
+
+.icon__right {
+   margin-left: 5px;
+   padding-top: 2px;
+}
+
+.header__first-number {
+   margin-left: 10px;
+   color: antiquewhite;
+}
+
+.header__line {
+   width: 100%;
+   height: 2px;
+   background: rgb(0, 0, 0);
+}
+
+.header__box {
+   background: rgb(91, 117, 231);
+   background: linear-gradient(90deg, rgba(91, 117, 231, 1) 0%, rgba(67, 67, 255, 1) 50%, rgba(91, 117, 231, 1) 100%);
+   width: 100%;
+   z-index: 999;
+   top: -1px;
+   position: sticky;
+   box-shadow: 0 0 10px #000;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.header__box-title {
+   color: aliceblue;
+   font-size: 40px;
+   font-weight: 900;
+   text-align: center;
+   font-family: 'Prosto one';
+   user-select: none;
+   padding-top: 5px;
+}
+
+.header__menu {
+   width: 50px;
+   height: 50px;
+   position: relative;
+   cursor: pointer;
+   transition: 0.9s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header__menu.active::after {
+   transform: rotate(-405deg);
+   top: 22px;
+}
+
+.header__menu.active::before {
+   transform: rotate(405deg);
+   bottom: 26px;
+}
+
+.header__menu.active span {
+   opacity: 0;
+}
+
+.header__menu span {
+   width: 100%;
+   height: 2px;
+   background: white;
+}
+
+.header__menu::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background: #fff;
+   top: 10px;
+   cursor: pointer;
+   transition: 500ms;
+
+}
+
+.header__menu::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background: #fff;
+   bottom: 10px;
+   cursor: pointer;
+   transition: 500ms;
+
+}
+
+.menu {
+   left: 0;
+   max-width: 750px;
+   width: 100%;
+   top: 61px;
+   /* min-height: 980px; */
+   min-height: 100vh;
+   height: 100%;
+   z-index: 999;
+   background: rgb(78, 77, 77);
+   padding: 50px;
+   /* display: flex; */
+   justify-content: space-between;
+   /* flex-direction: column; */
+   transition: 0.5s;
+   transform: translateX(-100%);
+   position: absolute;
+   box-shadow: 0 0 20px rgb(78, 77, 77);
+}
+
+.menu.active {
+   transform: translateX(0);
+}
+
+.menu__phone {
+   color: #ffffff;
+   font-size: 35px;
+   letter-spacing: 3px;
+   padding-left: 18px;
+}
+
+.menu__list {
+   display: flex;
+   flex-direction: column;
+   row-gap: 5px;
+}
+
+.menu__link {
+   color: aliceblue;
+}
+
+.header__menu-box {
+   width: 50px;
+   height: 50px;
+}
+
+.main__nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding-top: 20px;
+}
+
+.main__title {
+   color: #111111;
+   font-size: 30px;
+   position: relative;
+   transition: 0.3s;
+   z-index: 1;
+   display: flex;
+   justify-content: center;
+}
+
+.main__title:hover {
+   color: rgb(0, 119, 255);
+}
+
+.main__title::before {
+   content: '';
+   width: 0%;
+   height: 2px;
+   bottom: 0;
+   background: rgb(0, 119, 255);
+   position: absolute;
+   transition: 0.3s;
+}
+
+.main__title:hover::before {
+   width: 100%;
+}
+
+.main__line {
+   width: 30px;
+   height: 2px;
+   background: #000;
+   transform: rotate(90deg);
+   z-index: 1;
+}
+
+.swiper {
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+}
+
+.swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+}
+
+.swiper-slide img {
+   display: block;
+   width: 80%;
+   height: 550px;
+   object-fit: cover;
+   z-index: 1;
+}
+
+.swiper {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.slide__img {
+   border: 4px solid black;
+   position: relative;
+}
+
+.slide__title1 {
+   text-align: center;
+   margin-top: 30px;
+   color: rgb(0, 119, 255);
+   max-width: 700px;
+   height: 85px;
+   font-size: 40px;
+   margin: 50px auto;
+   text-transform: uppercase;
+}
+
+.slide__title {
+   text-align: center;
+   margin-top: 30px;
+   color: rgb(0, 119, 255);
+   width: 700px;
+   height: 85px;
+   font-size: 40px;
+   margin: 50px auto;
+   text-transform: uppercase;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   z-index: 1 !important;
+}
+
+.swiper-button-prev {
+   color: #000;
+}
+
+.swiper-button-next {
+   color: #000;
+}
+
+.footer {
+   margin-top: 100px;
+}
+
+ol,
+ul {
+   padding-left: 20px;
+}
